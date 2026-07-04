@@ -7,7 +7,7 @@ Book Data Web scraper
 This Project scrapes book titles and prices from the books to Scrape website using python. The scraped data is stored in a CSV file and analyzed using Pandas and matplotlib.
 
 ## Technologies Used
--Python
+-Python 
 -Requests
 -BeautifulSoup
 -Pandas
