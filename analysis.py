@@ -1,0 +1,17 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df=pd.read_csv("books.csv")
+df["Price"]=df["Price"].str.replace(r"[^0-9.]","",regex=True)
+df["Price"]=df["Price"].astype(float)
+print(df.head())
+print("Total Books:",len(df))
+print("Average Price:",df["Price"].mean())
+top10=df.head(10)
+plt.figure(figsize=(10,5))
+plt.bar(top10["Title"],top10["Price"])
+plt.xticks(rotation=90)
+plt.xlabel("Book Title")
+plt.ylabel("Price")
+plt.title("Top 10 Books Price")
+plt.tight_layout()
+plt.show()
